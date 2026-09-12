@@ -217,8 +217,8 @@ h2 {
 }
 
 .profile-wrapper {
-  width: 30rem;
-  height: 30rem;
+  width: 28rem;
+  height: 28rem;
   border-radius: 50%;
   background: linear-gradient(135deg, #6366f1, #06b6d4);
   padding: 3px;
@@ -236,56 +236,101 @@ h2 {
   display: block;
 }
 
-.profile {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-left: 25rem;
-}
-.avatar {
-  position: relative;
-  width: 35rem;
-  height: 35rem;
-  transition: all 0.3s ease;
-}
-.avatar img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 992px) {
+  body {
+    padding: 1rem 1.5rem;
+  }
 
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  .Short_bio {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+    margin-top: 1.5rem;
+  }
+
+  .Short_bio_text {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  .profile-wrapper {
+    margin-right: 0;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .Short_bio_buttons_container {
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
 }
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-width: 4px;
-  border-style: solid;
-  border-radius: 50%;
-  transition: all 0.5s ease;
-}
-.circle.one {
-  width: 220px;
-  height: 220px;
-  border-color: #14248a #14248a #14248a transparent;
-}
-.circle.two {
-  width: 250px;
-  height: 250px;
-  border-color: #14248a transparent #14248a #14248a;
-}
-.avatar:hover .circle {
-  transform: translate(-50%, -50%) rotate(360deg);
-}
-.avatar:hover {
-  transform: scale(1.1);
-}
-.avatar:hover img {
-  box-shadow: 0px 0px 10px #14248a;
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  header {
+    height: auto;
+    padding: 0.8rem 1.2rem;
+    gap: 0.8rem;
+    flex-direction: column-reverse;
+  }
+
+  .header_info_container {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-around;
+  }
+
+  .header_info_item {
+    font-size: 0.95rem;
+  }
+
+  .Nickname {
+    font-size: 1.15rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .coming_soon {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+
+  .Short_bio_p {
+    font-size: 0.95rem;
+    margin-top: 1.2rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+
+  .profile-wrapper {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .Short_bio_buttons_container {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .Short_bio_buttons {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 1.5rem !important;
+  }
 }
